@@ -7,7 +7,7 @@ Requirements:
 1. Create a Hotel class with the following attributes:
 
    - hotelName (String): Name of the hotel
-   - hotelId (int): Unique identifier for the hotel
+   - hotelId (UUID): Unique identifier for the hotel
    - rooms (ArrayList<Room>): List of rooms in the hotel
 
 2. Create a Room class with the following attributes:
@@ -25,7 +25,7 @@ Requirements:
 4. Implement a DatabaseUtil class that handles the JDBC operations for storing and retrieving hotel and room data from a database. This class should include methods for:
 
    - saveHotel(Hotel hotel): Saves the hotel and room(s) data to the database
-   - getHotel(int hotelId): Retrieves the hotel and room objects from the database based on the hotelId
+   - getHotels(): Retrieves the hotel and room objects from the database and returns the list of hotel with room detials
 
 5. Implement a FileUtil class that handles file I/O operations for storing and retrieving hotel and room data from a text file. This class should include methods for:
    - exportHotelToFile(Hotel hotel): Saves the hotel data to a text file
