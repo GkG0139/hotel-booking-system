@@ -1,0 +1,6 @@
+Hotel Name: Bangkok Motel
+Hotel ID: 7bc103e8-935c-44b1-bec8-c80509853e5b
+Total Rooms: 1
+Available rooms: 0
+Rooms status: 
+  - Rooms 1 : Booked
