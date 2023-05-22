@@ -24,11 +24,14 @@ public class App {
 
   private static List<Hotel> hotels;
 
-  public static void main(String[] args) {
+  public static void main(String[] args)
+    throws SQLException, RoomAlreadyExistsException {
     boolean isRunning = true;
-    try {
-      hotels = DatabaseUtil.getHotels();
-      while (isRunning) {
+
+    hotels = DatabaseUtil.getHotels();
+
+    while (isRunning) {
+      try {
         displayMenu();
         int choice = getUserChoice();
 
@@ -62,9 +65,9 @@ public class App {
             logger.warning("Invalid choice. Please try again.");
             break;
         }
+      } catch (Exception e) {
+        logger.log(Level.INFO, "Error: {0}", e.getMessage());
       }
-    } catch (Exception e) {
-      logger.log(Level.INFO, "Error: {0}", e.getMessage());
     }
   }
 
